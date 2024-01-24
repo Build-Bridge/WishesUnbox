@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   font-family: "Poppins", sans-serif;
+}
+
+.background-animate {
+  background-size: 400%;
+
+  -webkit-animation: AnimateBackground 10s ease infinite;
+  -moz-animation: AnimateBackground 10s ease infinite;
+  animation: AnimateBackground 10s ease infinite;
+}
+
+@keyframes AnimateBackground {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
