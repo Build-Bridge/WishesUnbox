@@ -1,15 +1,11 @@
-import { useState } from 'react'
+import SignupPage from "./sections/signupPage";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <p className='text-red-500'>
-        Hello React
-      </p>
+      <SignupPage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
