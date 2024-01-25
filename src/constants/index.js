@@ -1,4 +1,4 @@
-export const inputFields = [
+export const signupFields = [
   {
     id: "1",
     name: "firstname",
@@ -23,7 +23,19 @@ export const inputFields = [
     type: "date",
   },
   {
-    id: "5",
+    name: "password",
+    type: "password",
+    placeholder: "password",
+  },
+];
+
+export const loginFields = [
+  {
+    name: "username",
+    type: "text",
+    placeholder: "username",
+  },
+  {
     name: "password",
     type: "password",
     placeholder: "password",
