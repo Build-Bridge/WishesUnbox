@@ -24,7 +24,9 @@ const loginPage = () => {
         <div className="mt-20">
           <div className="bg-black flex justify-center items-center p-3 rounded-full cursor-pointer">
             <img src="/google.svg" alt="google" className="w-12" />
-            <p className="text-white mx-5 text-xl">Login with Google</p>
+            <p className="text-white mx-5 text-xl capitalize">
+              Login with Google
+            </p>
           </div>
         </div>
         <div>

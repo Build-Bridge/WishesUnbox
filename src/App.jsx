@@ -4,8 +4,8 @@ import LoginPage from "./sections/loginPage";
 function App() {
   return (
     <>
-      {/* <SignupPage /> */}
-      <LoginPage />
+      <SignupPage />
+      {/* <LoginPage /> */}
     </>
   );
 }
