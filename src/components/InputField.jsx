@@ -7,7 +7,7 @@ const InputField = ({ name, type, placeholder, register }) => {
         {name}
       </label>
       <input
-        className="w-full block rounded-md px-3 py-5 outline-none bg-zinc-100"
+        className="w-full block rounded-full p-5 outline-none bg-zinc-100"
         type={type}
         id={name}
         {...register(name, { required: true })}
