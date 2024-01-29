@@ -3,7 +3,7 @@ import { GithubIcon, LinkinIcon, TwitterIcon } from "./UtilityComponents/Icons";
 
 function Footer() {
   return (
-    <footer className="w-full flex items-center justify-center bg-gray-200">
+    <footer className="w-full flex items-center justify-center border-t-2">
       <div className="max-w-7xl px-8 w-full flex items-center justify-between gap-6 py-5">
         <a href="#" className="">
           Terms of service

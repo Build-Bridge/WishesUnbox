@@ -12,7 +12,7 @@ function Main() {
         </p>
       </section>
       <div className="flex gap-3 items-center max-sm:flex-col">
-        <a className="rounded-lg w-40 h-12 flex items-center justify-center bg-[#FFA478] text-white shadow-md">
+        <a className="rounded-lg w-40 h-12 flex items-center justify-center bg-[#FF9A55] text-white shadow-md">
           Try It Out
         </a>
       </div>
