@@ -10,8 +10,13 @@ export const signupFields = [
     placeholder: "lastname",
   },
   {
-    name: "email",
+    name: "username",
     type: "text",
+    placeholder: "username",
+  },
+  {
+    name: "email",
+    type: "email",
     placeholder: "enter your email address",
   },
   {
