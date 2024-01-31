@@ -10,9 +10,9 @@ const loginPage = () => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <section className="w-full h-full flex flex-col items-center justify-center">
+    <section className="w-full h-full flex items-center justify-center">
       <form
-        className="w-full h-fit p-14 m-2 bg-neutral-500-100 rounded-xl flex-1 md:max-w-[500px] shadow-lg relative"
+        className="w-full h-fit p-10 m-2 bg-neutral-500-100 rounded-xl flex-1 md:max-w-[500px] md:shadow-lg"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="flex flex-col text-center items-center justify-center mb-5">
@@ -32,6 +32,7 @@ const loginPage = () => {
         </div>
 
         <Button text="login" />
+
         <div className="flex flex-col items-center justify-between">
           <p className="p-2 text-[#ff9a55] cursor-pointer hover:underline">
             forget your password ?
@@ -43,18 +44,21 @@ const loginPage = () => {
             </a>
           </p>
         </div>
+
         <div className="flex w-full my-5 items-center justify-center">
           <hr className="flex-1" />
           <p className="uppercase p-3 text-2xl">or</p>
           <hr className="flex-1" />
         </div>
+
         <div className="bg-black flex justify-center items-center p-3 rounded-full cursor-pointer mt-5 mb-10">
           <img src="/google.svg" alt="google" className="w-12" />
           <p className="text-white mx-5 text-xl capitalize">
             Login with Google
           </p>
         </div>
-        <div className="absolute bottom-4 flex flex-1 items-center justify-between w-4/5 m-auto capitalize py-2 mt-10">
+
+        <div className="flex flex-1 items-center justify-between w-4/5 m-auto capitalize">
           <a href="/" className="text-xl hover:text-[#ffa478]">
             Terms and conditions
           </a>

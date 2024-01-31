@@ -12,7 +12,7 @@ const Signup = () => {
   return (
     <section className="w-full h-full flex flex-col items-center justify-center">
       <form
-        className="w-full h-fit p-14 m-2 bg-neutral-500-100 rounded-md flex-1 md:max-w-[500px] shadow-lg relative"
+        className="w-full h-fit p-10 m-2 bg-neutral-500-100 rounded-md flex-1 md:max-w-[500px] md:shadow-lg"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="flex flex-col text-center items-center justify-center mb-5">
@@ -30,7 +30,9 @@ const Signup = () => {
             );
           })}
         </div>
+
         <Button text="signup" />
+
         <div className="flex items-center justify-center">
           <span className="p-3 cursor-pointer">
             Already have an account?{" "}
@@ -39,18 +41,21 @@ const Signup = () => {
             </a>
           </span>
         </div>
+
         <div className="flex w-full my-10 items-center justify-center">
           <hr className="flex-1" />
           <p className="uppercase p-3 text-2xl">or</p>
           <hr className="flex-1" />
         </div>
+
         <div className="bg-black flex justify-center items-center p-3 rounded-full cursor-pointer my-10">
           <img src="/google.svg" alt="google" className="w-12" />
           <p className="text-white mx-5 text-xl capitalize">
             Sign up with Google
           </p>
         </div>
-        <div className="absolute bottom-4 flex flex-1 items-center justify-between w-4/5 m-auto capitalize py-2 mt-10">
+
+        <div className="flex flex-1 items-center justify-between w-4/5 m-auto capitalize">
           <a href="/" className="text-xl hover:text-[#ffa478]">
             Terms and conditions
           </a>
