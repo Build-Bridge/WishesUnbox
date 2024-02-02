@@ -4,10 +4,19 @@ import InputField from "../components/InputField";
 import { signupFields } from "../constants";
 import Button from "../components/Button";
 
+import { useAddUserMutation } from "../features/api/apiSlice";
+
 const Signup = () => {
   const { register, handleSubmit } = useForm();
+
+  const [addUser] = useAddUserMutation(register);
+
   // Function to get the data from the form
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = () => {
+    addUser(register);
+
+    console.log(addUser);
+  };
 
   return (
     <section className="w-full h-full flex flex-col items-center justify-center">
