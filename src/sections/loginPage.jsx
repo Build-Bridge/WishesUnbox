@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import InputField from "../components/InputField";
 import { loginFields } from "../constants";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 const loginPage = () => {
   const { register, handleSubmit } = useForm();
@@ -40,10 +41,13 @@ const loginPage = () => {
             forget your password ?
           </p>
           <p className="p-2 text-[10px] cursor-pointer">
-            No account yet?{" "}
-            <a href="/" className="hover:underline hover:text-[#ff9a55]">
-              Sign up
-            </a>
+            No account yet? {/* Remeber to change the path */}
+            <Link
+              to="/"
+              className="capitalize hover:underline hover:text-[#ff9a55]"
+            >
+              sign up
+            </Link>
           </p>
         </div>
 

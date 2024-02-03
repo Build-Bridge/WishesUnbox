@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import InputField from "../components/InputField";
 import { signupFields } from "../constants";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 import { useAddUserMutation } from "../features/api/apiSlice";
 
@@ -47,9 +48,15 @@ const Signup = () => {
         <div className="flex items-center justify-center">
           <span className="p-3 cursor-pointer text-[10px]">
             Already have an account?{" "}
-            <a href="/" className="hover:underline text-[#ff9a55]">
+            {/* <a href="/" className="hover:underline text-[#ff9a55]">
               Log In
-            </a>
+            </a> */}
+            <Link
+              to="/login"
+              className="capitalize hover:underline text-[#ff9a55]"
+            >
+              log in
+            </Link>
           </span>
         </div>
 
