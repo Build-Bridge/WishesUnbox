@@ -33,7 +33,7 @@ export const signupFields = [
 
 export const loginFields = [
   {
-    name: "username",
+    name: "emailOrUsername",
     type: "text",
     placeholder: "username or email",
   },

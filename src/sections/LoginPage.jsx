@@ -12,7 +12,7 @@ import { login, reset } from "../features/auth/authSlice";
 const loginPage = () => {
   const { register, handleSubmit, formState } = useForm({
     defaultValues: {
-      username: "",
+      emailOrUsername: "",
       password: "",
     },
   });
