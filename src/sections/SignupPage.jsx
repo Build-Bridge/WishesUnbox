@@ -39,6 +39,7 @@ const Signup = () => {
     dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
+  // Function to get the data from the form
   const onSubmit = (data) => {
     const userData = data;
     console.log(userData);
@@ -61,6 +62,7 @@ const Signup = () => {
           </span>
         </div>
 
+        {/* Throws error */}
         <ToastContainer />
         <div>
           {/* Mapped over the input fields */}
@@ -81,9 +83,6 @@ const Signup = () => {
         <div className="flex items-center justify-center">
           <span className="p-3 cursor-pointer text-[10px]">
             Already have an account?{" "}
-            {/* <a href="/" className="hover:underline text-[#ff9a55]">
-              Log In
-            </a> */}
             <Link
               to="/login"
               className="capitalize hover:underline text-[#ff9a55]"

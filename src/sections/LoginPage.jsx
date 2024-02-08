@@ -59,6 +59,7 @@ const loginPage = () => {
           </span>
         </div>
 
+        {/* Throws error */}
         <ToastContainer />
 
         <div>

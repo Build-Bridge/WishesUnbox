@@ -6,6 +6,7 @@ const API_URL = "https://wishesunbox-backend.onrender.com/";
 const signup = async (userData) => {
   const response = await axios.post(API_URL + "signup", userData);
 
+  // Save the user to the database
   if (response.data) {
     localStorage.setItem("user", JSON.stringify(response.data));
   }
@@ -17,6 +18,7 @@ const signup = async (userData) => {
 const login = async (userData) => {
   const response = await axios.post(API_URL + "login", userData);
 
+  // Save the user to the database
   if (response.data) {
     localStorage.setItem("user", JSON.stringify(response.data));
   }
