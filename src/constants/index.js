@@ -35,7 +35,7 @@ export const loginFields = [
   {
     name: "username",
     type: "text",
-    placeholder: "username",
+    placeholder: "username or email",
   },
   {
     name: "password",

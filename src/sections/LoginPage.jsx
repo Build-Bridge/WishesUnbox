@@ -1,4 +1,7 @@
-import React from "react";
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import InputField from "../components/InputField";
 import { loginFields } from "../constants";
 import Button from "../components/Button";
@@ -7,6 +10,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { login, reset } from "../features/auth/authSlice";
 
 const loginPage = () => {
+  const { register, handleSubmit, formState } = useForm({
+    defaultValues: {
+      username: "",
+      password: "",
+    },
+  });
+  const { errors } = formState;
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -16,21 +27,28 @@ const loginPage = () => {
 
   useEffect(() => {
     if (isError) {
-      // errMsg = isError.message;
+      toast.error(message);
     }
+
     if (isSuccess || user) {
       navigate("/dashboard");
-      dispatch(reset());
     }
+
+    dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
   // Function to get the data from the form
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    const userData = data;
+    console.log(userData);
+    dispatch(login(userData));
+  };
 
   return (
     <section className="w-full h-full flex items-center justify-center">
       <form
         className="w-full h-fit p-10 m-2 bg-neutral-500-100 rounded-xl flex-1 md:max-w-[500px] md:shadow-lg"
-        onSubmit={() => onSubmit}
+        onSubmit={handleSubmit(onSubmit)}
+        noValidate
       >
         <div className="flex flex-col text-center items-center justify-center mb-5">
           <h2 className="text-center font-bold text-2xl p-2 uppercase bg-gradient-to-br from-[#ff9a55] to-[#ffb09c] text-transparent bg-clip-text">
@@ -41,10 +59,19 @@ const loginPage = () => {
           </span>
         </div>
 
+        <ToastContainer />
+
         <div>
           {/* Mapped over the input fields */}
           {loginFields.map((input) => {
-            return <InputField key={input.name} {...input} />;
+            return (
+              <InputField
+                key={input.name}
+                {...input}
+                register={register}
+                error={errors}
+              />
+            );
           })}
         </div>
 

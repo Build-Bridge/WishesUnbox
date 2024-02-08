@@ -1,21 +1,26 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
+import InputField from "../components/InputField";
+import { signupFields } from "../constants";
 import Button from "../components/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { signup, reset } from "../features/auth/authSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
-  const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    username: "",
-    password: "",
-    dateOfBirth: "",
+  const { register, handleSubmit, formState } = useForm({
+    defaultValues: {
+      firstname: "",
+      lastname: "",
+      email: "",
+      username: "",
+      password: "",
+      dateOfBirth: "",
+    },
   });
-
-  const { firstname, lastname, email, username, password, dateOfBirth } =
-    formData;
+  const { errors } = formState;
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -24,38 +29,28 @@ const Signup = () => {
     (state) => state.auth
   );
 
-  // let errMsg;
-
   useEffect(() => {
     if (isError) {
-      // errMsg = isError.message;
+      toast.error(message);
     }
     if (isSuccess || user) {
       navigate("/dashboard");
-      dispatch(reset());
     }
+    dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
 
-  // Function to get the data from the form
-  const onChange = (e) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-    }));
+  const onSubmit = (data) => {
+    const userData = data;
+    console.log(userData);
+    dispatch(signup(userData));
   };
-
-  // const onSubmit = () => {
-  //   const userData = {};
-
-  //   console.log(userData);
-  //   dispatch(signup(userData));
-  // };
 
   return (
     <section className="w-full h-full flex flex-col items-center justify-center">
       <form
         className="w-full h-fit p-5 m-2 bg-neutral-500-100 rounded-md flex-1 md:max-w-[500px] md:shadow-lg"
-        onSubmit={() => onSubmit}
+        onSubmit={handleSubmit(onSubmit)}
+        noValidate
       >
         <div className="flex flex-col text-center items-center justify-center mb-5">
           <h2 className="text-center font-bold text-2xl p-2 uppercase bg-gradient-to-br from-[#ff9a55] to-[#ffb09c] text-transparent bg-clip-text">
@@ -66,114 +61,19 @@ const Signup = () => {
           </span>
         </div>
 
-        {/* <div>{errMsg}</div> */}
+        <ToastContainer />
         <div>
           {/* Mapped over the input fields */}
-          {/* {signupFields.map((input) => {
+          {signupFields.map((input) => {
             return (
               <InputField
                 key={input.name}
                 {...input}
-                onChange={() => onChange}
+                register={register}
+                error={errors}
               />
             );
-          })} */}
-          <div className="my-1">
-            <label
-              className="w-full block font-bold p-2 capitalize text-[10px]"
-              htmlFor="firstname"
-            >
-              firstname
-            </label>
-            <input
-              className="w-full block rounded-full py-2 px-5 outline-none bg-zinc-100 focus:border-2 border-[#ff9a55] text-[10px]"
-              type="text"
-              id="firstname"
-              value={firstname}
-              placeholder="firstname"
-              onChange={onChange}
-            />
-          </div>
-          <div className="my-1">
-            <label
-              className="w-full block font-bold p-2 capitalize text-[10px]"
-              htmlFor="lastname"
-            >
-              lastname
-            </label>
-            <input
-              className="w-full block rounded-full py-2 px-5 outline-none bg-zinc-100 focus:border-2 border-[#ff9a55] text-[10px]"
-              type="text"
-              id="lastname"
-              value={lastname}
-              placeholder="lastname"
-              onChange={onChange}
-            />
-          </div>
-          <div className="my-1">
-            <label
-              className="w-full block font-bold p-2 capitalize text-[10px]"
-              htmlFor="email"
-            >
-              email
-            </label>
-            <input
-              className="w-full block rounded-full py-2 px-5 outline-none bg-zinc-100 focus:border-2 border-[#ff9a55] text-[10px]"
-              type="text"
-              id="email"
-              value={email}
-              placeholder="email"
-              onChange={onChange}
-            />
-          </div>
-          <div className="my-1">
-            <label
-              className="w-full block font-bold p-2 capitalize text-[10px]"
-              htmlFor="username"
-            >
-              username
-            </label>
-            <input
-              className="w-full block rounded-full py-2 px-5 outline-none bg-zinc-100 focus:border-2 border-[#ff9a55] text-[10px]"
-              type="text"
-              id="username"
-              value={username}
-              placeholder="username"
-              onChange={onChange}
-            />
-          </div>
-          <div className="my-1">
-            <label
-              className="w-full block font-bold p-2 capitalize text-[10px]"
-              htmlFor="password"
-            >
-              password
-            </label>
-            <input
-              className="w-full block rounded-full py-2 px-5 outline-none bg-zinc-100 focus:border-2 border-[#ff9a55] text-[10px]"
-              type="text"
-              id="password"
-              value={password}
-              placeholder="password"
-              onChange={onChange}
-            />
-          </div>
-          <div className="my-1">
-            <label
-              className="w-full block font-bold p-2 capitalize text-[10px]"
-              htmlFor="dateOfBirth"
-            >
-              Date of birth
-            </label>
-            <input
-              className="w-full block rounded-full py-2 px-5 outline-none bg-zinc-100 focus:border-2 border-[#ff9a55] text-[10px]"
-              type="text"
-              id="dateOfBirth"
-              value={dateOfBirth}
-              placeholder="YYYY-MM-DD"
-              onChange={onChange}
-            />
-          </div>
+          })}
         </div>
 
         <Button onClick={() => console.log(123)} text="signup" />
