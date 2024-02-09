@@ -10,31 +10,32 @@ export const signupFields = [
     placeholder: "lastname",
   },
   {
+    name: "email",
+    type: "email",
+    placeholder: "email",
+  },
+  {
     name: "username",
     type: "text",
     placeholder: "username",
-  },
-  {
-    name: "email",
-    type: "email",
-    placeholder: "enter your email address",
-  },
-  {
-    name: "Date of Birth",
-    type: "date",
   },
   {
     name: "password",
     type: "password",
     placeholder: "password",
   },
+  {
+    name: "dateOfBirth",
+    type: "text",
+    placeholder: "YYYY-MM-DD",
+  },
 ];
 
 export const loginFields = [
   {
-    name: "username",
+    name: "emailOrUsername",
     type: "text",
-    placeholder: "username",
+    placeholder: "username or email",
   },
   {
     name: "password",
