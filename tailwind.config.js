@@ -5,6 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+<<<<<<< HEAD
     extend: {
       // landing page bg images
       backgroundImage: {
@@ -25,6 +26,27 @@ export default {
         'tertiary-2' : '#FFBFC0' 
       }
     },
+=======
+    extend: {},
+    fontSize: {
+      'lg-main': '34px',
+      'lg-sub' : '24px',
+      'lg-body': '16px'
+    },
+    colors:{
+      'main-orange':'#FF9A55',
+      'light-orange':'#FFA478',
+      'beige':'#FFB09C',
+      'light-pink':'#FFBFC0',
+      'white':'#ffffff',
+      'black':'#000000',
+    },
+    fontFamily: {
+      sans: ['Poppins', 'sans-serif'],
+      serif: ['Notable', 'serif'],
+      'montez': ['Montez', 'monospace']
+    }
+>>>>>>> 141576d2ea81f9d68287b34c24b5f99fc274118e
   },
   plugins: [],
 }
