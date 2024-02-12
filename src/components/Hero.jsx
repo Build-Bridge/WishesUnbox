@@ -6,25 +6,24 @@ const Hero = () => {
   return (
     <div id="home" className="sectionWrap py-5 max-w-6xl mx-auto md:mb-0 ">
       <div className="lg:flex items-center justify-center">
-
         <div className="mdd:w-2/3 lg:w-3/6 text-center  lg:text-left">
           <motion.h1
             variants={textVariant(1)}
             // className={` text-4xl md:text-6xl font-extrabold  text-[#333]`}
-            className="heroHeadText txx"
+            className="heroHeadText txx text-balance"
           >
-            Unleash smiles with our dazzling wishes...!
+            Personalized Gift Card Creation platform...!
           </motion.h1>
           <p className=" mt-3 mb-5 mdd:text-left   md:text-lg font-extralight">
-            Send Vibrant wishes to your lovedd ones and turn their day into a
-            celebration. Dive into the magic of heartfelt connections -- Start
-            your wishful journey today...
+            Send a Vibrant wish Cards to your loved ones and turn their day into
+            a celebration. Dive into the magic of heartfelt connections -- Make
+            a unique card to show how much you care...
           </p>
-          <Link to="/signup" className="bg-primary text-white leading-4 hover:bg-primary nv:mt-6 mt-4 text-lg md:text-xl rounded-2xl my-2 px-5 py-2"
-            >
-            <button >
-              Get Started
-            </button>
+          <Link
+            to="/signup"
+            className="bg-primary text-white leading-4 hover:bg-primary nv:mt-6 mt-4 text-lg md:text-xl rounded-2xl my-2 px-5 py-2"
+          >
+            <button>Get Started</button>
           </Link>
         </div>
 
@@ -36,10 +35,9 @@ const Hero = () => {
             alt="hero image"
           />
         </div>
-
       </div>
     </div>
   );
 };
 
-export default Hero
+export default Hero;
