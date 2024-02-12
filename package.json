@@ -12,7 +12,11 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.1.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "framer-motion": "^11.0.3",
+=======
+    "axios": "^1.6.7",
+>>>>>>> 141576d2ea81f9d68287b34c24b5f99fc274118e
 =======
     "axios": "^1.6.7",
 >>>>>>> 141576d2ea81f9d68287b34c24b5f99fc274118e

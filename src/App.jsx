@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import SignupPage from "./sections/signupPage";
 import LoginPage from "./sections/loginPage";
 import LandingPage from "./sections/landingPage";
+=======
+import SignupPage from "./sections/SignupPage";
+import LoginPage from "./sections/LoginPage";
+import Dashboard from "./sections/Dashboard";
+>>>>>>> 141576d2ea81f9d68287b34c24b5f99fc274118e
 =======
 import SignupPage from "./sections/SignupPage";
 import LoginPage from "./sections/LoginPage";

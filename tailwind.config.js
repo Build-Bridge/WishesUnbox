@@ -46,6 +46,9 @@ export default {
       serif: ['Notable', 'serif'],
       'montez': ['Montez', 'monospace']
     }
+<<<<<<< HEAD
+>>>>>>> 141576d2ea81f9d68287b34c24b5f99fc274118e
+=======
 >>>>>>> 141576d2ea81f9d68287b34c24b5f99fc274118e
   },
   plugins: [],
