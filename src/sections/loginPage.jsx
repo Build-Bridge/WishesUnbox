@@ -43,7 +43,7 @@ const loginPage = () => {
           <p className="p-2 text-[10px] cursor-pointer">
             No account yet? {/* Remeber to change the path */}
             <Link
-              to="/"
+              to="/signup"
               className="capitalize hover:underline hover:text-[#ff9a55]"
             >
               sign up

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Calendly//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTAMP:20230320T151649Z
+UID:calendly-673684414
+DTSTART:20230324T180000Z
+DTEND:20230324T200000Z
+CLASS:PRIVATE
+DESCRIPTION:Event Name: Beginner Friendly Shell\nEvent Description: Dear so
+ ftware engineer\,I would gladly invite you to beginner friendly classes fo
+ r shell and how to use it in the ALX SE program.Thank you.\nDate & Time: 1
+ 9:00 - 21:00 (West Africa Time) on Friday\, March 24\, 2023\nLocation: Thi
+ s is a Zoom web conference.\n\nYou can join this meeting from your compute
+ r\, tablet\, or smartphone.\nhttps://us06web.zoom.us/j/88403794081\n\nNeed
+  to make changes to this event?\nCancel: https://calendly.com/cancellation
+ s/00f9b2b4-de9a-48b1-834f-698ad7a33a71\nReschedule: https://calendly.com/r
+ eschedulings/00f9b2b4-de9a-48b1-834f-698ad7a33a71\n
+LOCATION:https://us06web.zoom.us/j/88403794081
+SUMMARY:Beginner Friendly Shell with Maarten van Middelaar
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
