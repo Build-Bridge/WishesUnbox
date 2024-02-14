@@ -21,7 +21,7 @@ function NavSidebar({ showSidebar, close }) {
   return (
     <div
       className={`md:hidden w-screen h-screen duration-700 overflow-hidden transition-all position fixed flex items-center justify-center top-0 left-0 bg-white ${
-        showSidebar ? "w-screen h-screen z-[2] opacity-100" : "w-12 h-32 z-[-2] opacity-0"
+        showSidebar ? "w-screen h-screen z-20s opacity-100" : "w-12 h-32 -zs-[2] opacity-0"
       }`}
     >
       <div className="flex flex-col gap-5 font-semibold text-gray-900 items-center justify-center">
@@ -42,7 +42,7 @@ function NavSidebar({ showSidebar, close }) {
 function Header() {
   const [showSidebar, setShowSidebar] = useState(false);
   return (
-    <nav className="w-full py-3 flex justify-between flex-col items-center absolute top-0 left-0 bg-gray-200">
+    <nav className="w-full py-3 flex justify-between flex-col items-center absolute top-0 left-0 bg-gray-200 z-10">
       <button
         className="md:hidden absolute top-8 left-5 text-3xl text-gray-800"
         onClick={() => setShowSidebar((prev) => !prev)}
