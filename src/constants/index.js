@@ -23,7 +23,6 @@ export const signupFields = [
     placeholder: "username",
   },
   {
-<<<<<<< HEAD
     name: "password",
     type: "password",
     placeholder: "password",
@@ -42,8 +41,6 @@ export const loginFields = [
     placeholder: "username or email",
   },
   {
-=======
->>>>>>> 141576d2ea81f9d68287b34c24b5f99fc274118e
     name: "password",
     type: "password",
     placeholder: "password",
@@ -58,14 +55,11 @@ export const loginFields = [
 // navigation bar links
 export const navLinks = [
   {
-<<<<<<< HEAD
     id: "home",
-    title: "Home"
-=======
+    title: "Home",
     name: "emailOrUsername",
     type: "text",
     placeholder: "username or email",
->>>>>>> 141576d2ea81f9d68287b34c24b5f99fc274118e
   },
   {
     id: "about",

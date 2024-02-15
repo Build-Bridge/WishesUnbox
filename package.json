@@ -11,22 +11,17 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.1.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "framer-motion": "^11.0.3",
-=======
     "axios": "^1.6.7",
->>>>>>> 141576d2ea81f9d68287b34c24b5f99fc274118e
-=======
-    "axios": "^1.6.7",
->>>>>>> 141576d2ea81f9d68287b34c24b5f99fc274118e
+    "framer-motion": "^11.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.50.1",
     "react-icons": "^5.0.1",
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.22.0",
-    "react-toastify": "^10.0.4"
+    "react-scroll-parallax": "^3.4.5",
+    "react-toastify": "^10.0.4",
+    "react-vertical-timeline-component": "^3.6.0"
   },
   "devDependencies": {
     "@hookform/devtools": "^4.3.1",
