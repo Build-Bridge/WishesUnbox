@@ -9,14 +9,13 @@ export default {
     extend: {
       // landing page bg images
       backgroundImage: {
-        'ellipse' : "url('/ellipse2.png')",
-        'ellipse-2' : "url('/ellipse3.png')",
-        'contact' : "url('/contact.gif')"
+        ellipse: "url('/ellipse2.png')",
+        "ellipse-2": "url('/ellipse3.png')",
+        contact: "url('/contact.gif')",
       },
       screens: {
-        'nv' : '890px',
-        'ft' : '840px'
-        
+        nv: "890px",
+        ft: "840px",
       },
       // landing page colors
       colors : {
@@ -44,4 +43,4 @@ export default {
     },
   },
   plugins: [],
-}
+};

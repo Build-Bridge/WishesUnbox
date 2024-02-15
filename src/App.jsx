@@ -1,15 +1,15 @@
 
+import LoginPage from "./sections/LoginPage";
 import { Routes, Route } from "react-router-dom";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Signup from "./sections/SignupPage";
-import LandingPage from "./sections/landingPage";
-import LoginPage from "./sections/LoginPage";
+import LandingPage from "./sections/LandingPage";
+
 
 function App() {
 
   return (
     <>
-
       <ParallaxProvider>
         <Routes>
           {/* Will have to change the signup path later */}
@@ -18,12 +18,6 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
         </Routes>
       </ParallaxProvider>
-      <Routes>
-        {/* Will have to change the signup path later */}
-        {/* <Route path="/" element={<S />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/dashboard" element={<Dashboard />} /> */}
-      </Routes>
     </>
   );
 }

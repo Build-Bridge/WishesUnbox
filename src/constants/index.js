@@ -1,6 +1,5 @@
 // import { TbSocial } from "react-icons/tb";
 
-
 export const signupFields = [
   {
     name: "firstname",
@@ -38,25 +37,18 @@ export const loginFields = [
   {
     name: "emailOrUsername",
     type: "text",
-    placeholder: "username or email",
+    placeholder: "Email or Username",
   },
   {
     name: "password",
     type: "password",
     placeholder: "password",
   },
-  {
-    name: "dateOfBirth",
-    type: "text",
-    placeholder: "YYYY-MM-DD",
-  },
 ];
 
 // navigation bar links
 export const navLinks = [
   {
-    id: "home",
-    title: "Home",
     name: "emailOrUsername",
     type: "text",
     placeholder: "username or email",
@@ -71,7 +63,7 @@ export const navLinks = [
   },
   {
     id: "how",
-    title: "How it works"
+    title: "How it works",
   },
   {
     id: "contact",
@@ -83,46 +75,45 @@ export const navLinks = [
 export const howItWorks = [
   {
     title: "Select the Perfect Gift Card",
-    text: `Choose from a wide array of digital gift cards representing various brands, experiences, and occasions. Whether it's a cozy coffee date, a spa retreat, or a shopping spree, we've got the perfect card to match every celebration.`
+    text: `Choose from a wide array of digital gift cards representing various brands, experiences, and occasions. Whether it's a cozy coffee date, a spa retreat, or a shopping spree, we've got the perfect card to match every celebration.`,
   },
   {
     title: "Personalize Your Wishes",
-    text: `Write a heartfelt message to accompany your gift card. Express your love, share memories, or simply send warm wishes for the festive season. Personalize each card to make it uniquely yours.`
+    text: `Write a heartfelt message to accompany your gift card. Express your love, share memories, or simply send warm wishes for the festive season. Personalize each card to make it uniquely yours.`,
   },
   {
     title: "Schedule Delivery",
-    text: ` Plan ahead and schedule the delivery of your gift card and wishes. Whether it's for birthdays, holidays, or just to say "I miss you" Wishes Unbox ensures your thoughtful gesture arrives right on time.`
+    text: ` Plan ahead and schedule the delivery of your gift card and wishes. Whether it's for birthdays, holidays, or just to say "I miss you" Wishes Unbox ensures your thoughtful gesture arrives right on time.`,
   },
   {
     title: "Real-Time Notifications",
-    text: `Stay in the loop with real-time notifications. Know when your loved ones receive and unbox their virtual gifts, creating shared moments of joy, even from a distance.`
+    text: `Stay in the loop with real-time notifications. Know when your loved ones receive and unbox their virtual gifts, creating shared moments of joy, even from a distance.`,
   },
-]
+];
 // Featureas
 
 export const features = [
   {
     icon: `customize.png`,
     title: "Customize",
-    text: "Customize your wishes, such as setting preference for types of wishes and how your recipient can be notified"
+    text: "Customize your wishes, such as setting preference for types of wishes and how your recipient can be notified",
   },
   {
-    icon:   	`schedule.png`,
+    icon: `schedule.png`,
     title: "Scheduled delivery",
-    text: "This service allows our users to specify a future date and time for the delivery of your wishes"
+    text: "This service allows our users to specify a future date and time for the delivery of your wishes",
   },
   {
     icon: `folders.png`,
     title: "Wishes Archives",
-    text: "Maintain an archive of fulfilled wishes as a source of inspiration and revisit your past wishes and desires"
+    text: "Maintain an archive of fulfilled wishes as a source of inspiration and revisit your past wishes and desires",
   },
   // {
   //   icon: 'camp.svg',
   //   title:"Social Integration",
   //   text: "Share your wishes to social media platform, to foster community engagement on the platform"
   // },
-]
-
+];
 
 // framer motion
 
