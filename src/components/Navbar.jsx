@@ -15,7 +15,7 @@ const Navbar = () => {
     const mobile = document.querySelector("#mobile");
     mobile?.classList.add("hidden");
     setToggle(false);
-  },[active])
+  }, [active]);
 
   // onScroll navbar becomes fixed and given a glassMorphism styling
   useEffect(() => {
@@ -66,15 +66,18 @@ const Navbar = () => {
                     : "text-[#555]"
                 } font-medium cursor-pointer md:text-lg lg:text-[1.2rem] hover:text-secondary`}
               >
-                <li className="flex items-center">
+                <li key={link.id} className="flex items-center">
                   {link.title} &nbsp;{" "}
                   {link.id === "contact" ? <RiContactsLine /> : " "}
                 </li>
               </a>
             ))}
-              <Link to="/login" className="lg:hidden font-medium cursor-pointer md:text-[1.2rem] hover:text-secondary">
-                <GoSignIn className="text-black"/>
-              </Link>
+            <Link
+              to="/login"
+              className="lg:hidden font-medium cursor-pointer md:text-[1.2rem] hover:text-secondary"
+            >
+              <GoSignIn className="text-black" />
+            </Link>
           </ul>
         </div>
 
@@ -114,23 +117,23 @@ const Navbar = () => {
       >
         <ul className="flex flex-col mx-3 font-medium mt-4 lg:mt-0 rounded-lg lg:flex-row lg:border-0 text-[1.1rem]">
           {navLinks.map((link) => (
-            <a 
-              key={link.id}
-              href={`/#${link.id}`}
-            >
+            <a key={link.id} href={`/#${link.id}`}>
               <li
-              onClick={() => setActive(link.title)}
-              className={`${
-                active === link.title ? "text-primary" : "text-[#666]"
-              }  hover:text-secondary flex items-center text-xl my-2`}
-            >
-              {link.title} &nbsp;{" "}
-                  {link.id === "contact" ? <RiContactsLine /> : " "}
-            </li>
+                onClick={() => setActive(link.title)}
+                className={`${
+                  active === link.title ? "text-primary" : "text-[#666]"
+                }  hover:text-secondary flex items-center text-xl my-2`}
+              >
+                {link.title} &nbsp;{" "}
+                {link.id === "contact" ? <RiContactsLine /> : " "}
+              </li>
             </a>
           ))}
           <li className="bg-primary hover:bg-secondary flex items-center rounded-xl text-white mb-3 py-2 px-3">
-            Sign in<GoSignIn className="w-4 h-4 ml-4" />
+            <Link to="/login">
+              Sign in
+              <GoSignIn className="w-4 h-4 ml-4" />
+            </Link>
           </li>
         </ul>
       </div>

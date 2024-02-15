@@ -31,7 +31,7 @@ const loginPage = () => {
     }
 
     if (isSuccess || user) {
-      navigate("/dashboard");
+      // navigate("/dashboard");
     }
 
     dispatch(reset());
