@@ -37,27 +37,22 @@ export const loginFields = [
   {
     name: "emailOrUsername",
     type: "text",
-    placeholder: "username or email",
+    placeholder: "Email or Username",
   },
   {
     name: "password",
     type: "password",
     placeholder: "password",
   },
-  {
-    name: "dateOfBirth",
-    type: "text",
-    placeholder: "YYYY-MM-DD",
-  },
 ];
 
 // navigation bar links
 export const navLinks = [
   {
-    id: "home",
-    title: "Home",
+    id: "emailorusername",
     name: "emailOrUsername",
     type: "text",
+    placeholder: "username or email",
   },
   {
     id: "about",

@@ -9,7 +9,7 @@ import {
   HowItWorks,
   AboutMission,
 } from "../components";
-function landingPage() {
+function LandingPage() {
   return (
     <div className="w-full overflow-hidden bg-ellipse bg-no-repeat bg-left-top">
       <Navbar />
@@ -28,4 +28,4 @@ function landingPage() {
   );
 }
 
-export default landingPage;
+export default LandingPage;

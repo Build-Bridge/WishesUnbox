@@ -9,7 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { login, reset } from "../features/auth/authSlice";
 
-const loginPage = () => {
+const LoginPage = () => {
   const { register, handleSubmit, formState } = useForm({
     defaultValues: {
       emailOrUsername: "",
@@ -31,7 +31,7 @@ const loginPage = () => {
     }
 
     if (isSuccess || user) {
-      navigate("/dashboard");
+      // navigate("/dashboard");
     }
 
     dispatch(reset());
@@ -119,4 +119,4 @@ const loginPage = () => {
   );
 };
 
-export default loginPage;
+export default LoginPage;
