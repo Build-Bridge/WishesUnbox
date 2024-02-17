@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FiPlusCircle } from "react-icons/fi";
 import { sidebarLinks } from "../../constants/index";
 import { NavLink } from "react-router-dom";
 import { useStateContext } from "../../contexts/ContextProvider";
 
 export const Sidebar = () => {
-  const { activeMenu } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize, setScreenSize } =
+    useStateContext();
+
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (screenSize <= 768) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(true);
+    }
+  }, [screenSize]);
+
+  const handleCloseSidebar = () => {
+    if (activeMenu && screenSize <= 768) {
+      setActiveMenu(false);
+    }
+  };
+
   const activeLink =
     "flex items-center gap-5 pl-4 p-3 bg-[#FFECDE] rounded-lg text-primary text-md m-2";
   const normalLink =
@@ -70,7 +94,9 @@ export const Sidebar = () => {
                   <NavLink
                     to={`/${link.name}`}
                     key={link.name}
-                    onClick={() => {}}
+                    onClick={() => {
+                      handleCloseSidebar;
+                    }}
                     className={({ isActive }) =>
                       isActive ? activeLink : normalLink
                     }

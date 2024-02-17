@@ -4,7 +4,6 @@ import DashboardNavbar from "../components/Dashboard/DashboardNavbar";
 import { useStateContext } from "../contexts/ContextProvider";
 
 export const Dashboard = () => {
-  const width = window.innerWidth;
   const { setActiveMenu } = useStateContext();
 
   return (
