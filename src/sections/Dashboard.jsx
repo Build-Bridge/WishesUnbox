@@ -1,5 +1,11 @@
+import DashboardCardList from "./dashboard/DashboardCardList";
+
 function Dashboard() {
-  return <div></div>;
+  return (
+    <div className="w-full h-screen">
+      <DashboardCardList />
+    </div>
+  );
 }
 
 export default Dashboard;
