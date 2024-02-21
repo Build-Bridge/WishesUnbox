@@ -1,15 +1,13 @@
 import {
-  Routes,
-  Route,
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import { ParallaxProvider } from "react-scroll-parallax";
 
+import Dashboard from "./sections/Dashboard";
 import LoginPage from "./sections/LoginPage";
 import Signup from "./sections/SignupPage";
 import LandingPage from "./sections/LandingPage";
-import Dashboard from "./sections/Dashboard";
 
 function App() {
   const router = createBrowserRouter([
@@ -37,21 +35,6 @@ function App() {
       ],
     },
   ]);
-
-  return (
-    <>
-      <ParallaxProvider>
-        <RouterProvider router={router} />
-        {/* <Routes>
-          {/* Will have to change the signup path later */}
-        {/* <Route exact path="/" element={<LandingPage />} /> */}
-        {/* <Route path="/signup" element={<Signup />} /> */}
-        {/* <Route path="/login" element={<LoginPage />} /> */}
-        {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
-        {/* </Routes> */}
-      </ParallaxProvider>
-    </>
-  );
 }
 
 export default App;
