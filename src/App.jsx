@@ -1,9 +1,4 @@
-import {
-  Routes,
-  Route,
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 import LoginPage from "./sections/LoginPage";
@@ -42,13 +37,6 @@ function App() {
     <>
       <ParallaxProvider>
         <RouterProvider router={router} />
-        {/* <Routes>
-          {/* Will have to change the signup path later */}
-        {/* <Route exact path="/" element={<LandingPage />} /> */}
-        {/* <Route path="/signup" element={<Signup />} /> */}
-        {/* <Route path="/login" element={<LoginPage />} /> */}
-        {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
-        {/* </Routes> */}
       </ParallaxProvider>
     </>
   );
