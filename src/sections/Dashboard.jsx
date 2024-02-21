@@ -1,11 +1,26 @@
-import DashboardCardList from "./dashboard/DashboardCardList";
+import { Outlet } from "react-router-dom";
+import Sidebar from "../components/Dashboard/Sidebar";
+import DashboardNavbar from "../components/Dashboard/DashboardNavbar";
+import { useStateContext } from "../contexts/ContextProvider";
 
-function Dashboard() {
+export const Dashboard = () => {
+  const { setActiveMenu } = useStateContext();
+
   return (
-    <div className="w-full h-screen">
-      <DashboardCardList />
+    <div className="flex flex-1 relative">
+      <div>
+        <Sidebar />
+      </div>
+      <div className="flex-1">
+        <div className="flex items-start">
+          <DashboardNavbar />
+        </div>
+        <div>
+          <Outlet />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default Dashboard;
