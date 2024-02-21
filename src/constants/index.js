@@ -49,6 +49,7 @@ export const loginFields = [
 // navigation bar links
 export const navLinks = [
   {
+    id: "emailorusername",
     name: "emailOrUsername",
     type: "text",
     placeholder: "username or email",
