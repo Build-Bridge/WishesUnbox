@@ -32,10 +32,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-function App() {
+const App = () => {
   <ParallaxProvider>
     <RouterProvider router={router} />
   </ParallaxProvider>;
-}
+};
 
 export default App;
