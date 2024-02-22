@@ -33,7 +33,7 @@ const Signup = () => {
     if (isError) {
       toast.error(message);
     }
-    if (isSuccess || user) {
+    if (isSuccess && user) {
       navigate("/dashboard");
     }
     dispatch(reset());

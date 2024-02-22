@@ -49,12 +49,6 @@ export const loginFields = [
 // navigation bar links
 export const navLinks = [
   {
-    id: "emailorusername",
-    name: "emailOrUsername",
-    type: "text",
-    placeholder: "username or email",
-  },
-  {
     id: "about",
     title: "About",
   },
@@ -114,6 +108,56 @@ export const features = [
   //   title:"Social Integration",
   //   text: "Share your wishes to social media platform, to foster community engagement on the platform"
   // },
+];
+
+export const sidebarLinks = [
+  {
+    title: "Overview",
+    links: [
+      {
+        name: "Dashboard",
+        // icon: <MdOutlineDashboard />,
+      },
+      {
+        name: "Analytics",
+        // icon: <MdOutlineAnalytics />,
+      },
+    ],
+  },
+  {
+    title: "Content",
+    links: [
+      {
+        name: "Inbox",
+        // icon: <FiInbox />,
+      },
+      {
+        name: "Recent",
+        // icon: <IoTimeOutline />,
+      },
+      {
+        name: "Compose",
+        // icon: <TfiWrite />,
+      },
+      {
+        name: "Schedule",
+        // icon: <GrFormSchedule />,
+      },
+    ],
+  },
+  {
+    title: "Configurations",
+    links: [
+      {
+        name: "Settings",
+        // icon: <IoSettingsOutline />,
+      },
+      {
+        name: "Sign out",
+        // icon: <PiSignOut />,
+      },
+    ],
+  },
 ];
 
 // framer motion
