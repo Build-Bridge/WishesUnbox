@@ -120,7 +120,6 @@ const Navbar = () => {
             <a key={link.id} href={`/#${link.id}`}>
               <li
                 onClick={() => setActive(link.title)}
-                key={link.id}
                 className={`${
                   active === link.title ? "text-primary" : "text-[#666]"
                 }  hover:text-secondary flex items-center text-xl my-2`}
