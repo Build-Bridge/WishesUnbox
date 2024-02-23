@@ -1,10 +1,4 @@
 // import { TbSocial } from "react-icons/tb";
-import { MdOutlineDashboard, MdOutlineAnalytics } from "react-icons/md";
-import { FiInbox } from "react-icons/fi";
-import { IoTimeOutline, IoSettingsOutline } from "react-icons/io5";
-import { TfiWrite } from "react-icons/tfi";
-import { GrFormSchedule } from "react-icons/gr";
-import { PiSignOut } from "react-icons/pi";
 
 export const signupFields = [
   {

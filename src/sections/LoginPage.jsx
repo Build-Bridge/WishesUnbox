@@ -30,8 +30,8 @@ const LoginPage = () => {
       toast.error(message);
     }
 
-    if (isSuccess || user) {
-      // navigate("/dashboard");
+    if (isSuccess && user) {
+      navigate("/dashboard");
     }
 
     dispatch(reset());

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 
-const StateContext = createContext();
+export const StateContext = createContext();
 
 export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(false);

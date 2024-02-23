@@ -1,11 +1,8 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Dashboard/Sidebar";
 import DashboardNavbar from "../components/Dashboard/DashboardNavbar";
-import { useStateContext } from "../contexts/ContextProvider";
 
 export const Dashboard = () => {
-  const { setActiveMenu } = useStateContext();
-
   return (
     <div className="flex flex-1 relative">
       <div>
