@@ -3,6 +3,7 @@ import { useStateContext } from "../contexts/ContextProvider";
 import { useNavigate } from "react-router-dom";
 
 const ProtectedRoutes = ({ children }) => {
+  // Will have to change this to the user object we will be getting from the backend
   const { user } = useStateContext();
   const navigate = useNavigate();
 
