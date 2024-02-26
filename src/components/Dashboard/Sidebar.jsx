@@ -56,7 +56,7 @@ export const Sidebar = () => {
               <p className="text-gray-400 uppercase m-2 mt-2">{item.title}</p>
               {item.links.map((link) => (
                 <NavLink
-                  to={`/${link.name}`}
+                  to={`/dashboard/${link.name}`}
                   key={link.name}
                   onClick={() => {}}
                   className={({ isActive }) =>

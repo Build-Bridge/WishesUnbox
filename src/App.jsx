@@ -30,7 +30,7 @@ const router = createBrowserRouter([
     children: [
       {
         // Replace this with the actual child component and correct path
-        path: "/dashboard/cardlist",
+        path: "/dashboard/analytics",
         element: <DashboardCardList />,
       },
     ],
