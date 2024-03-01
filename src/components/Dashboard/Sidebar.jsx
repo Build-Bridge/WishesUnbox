@@ -63,7 +63,7 @@ export const Sidebar = () => {
                     isActive ? activeLink : normalLink
                   }
                 >
-                  {/* {link.icon} */}
+                  {link.icon}
                   <span className="capitalize text-[14px]">{link.name}</span>
                 </NavLink>
               ))}

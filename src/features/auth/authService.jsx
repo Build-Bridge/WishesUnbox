@@ -7,9 +7,9 @@ const signup = async (userData) => {
   const response = await axios.post(API_URL + "signup", userData);
 
   // Save the user to the database
-  if (response.data) {
-    localStorage.setItem("user", JSON.stringify(response.data));
-  }
+  // if (response.data) {
+  //   localStorage.setItem("user", JSON.stringify(response.data));
+  // }
 
   return response.data;
 };
@@ -19,9 +19,9 @@ const login = async (userData) => {
   const response = await axios.post(API_URL + "login", userData);
 
   // Save the user to the database
-  if (response.data) {
-    localStorage.setItem("user", JSON.stringify(response.data));
-  }
+  // if (response.data) {
+  //   localStorage.setItem("user", JSON.stringify(response.data));
+  // }
 
   return response.data;
 };
@@ -30,7 +30,7 @@ const login = async (userData) => {
 const logout = async () => {
   const response = await axios.get(API_URL + "logout");
 
-  localStorage.removeItem("user");
+  // localStorage.removeItem("user");
 
   return response.data;
 };
@@ -67,6 +67,17 @@ const googleCallback = async () => {
   return response.data;
 };
 
+// To get the current logged in user
+const getCurrentUser = async () => {
+  const response = await axios.get(API_URL + "user/me");
+
+  if (response.data) {
+    localStorage.setItem("user", JSON.stringify(response.data));
+  }
+
+  return response.data;
+};
+
 const authService = {
   signup,
   login,
@@ -75,6 +86,7 @@ const authService = {
   resetpassword,
   googleAuth,
   googleCallback,
+  getCurrentUser,
 };
 
 export default authService;

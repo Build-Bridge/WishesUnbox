@@ -1,4 +1,10 @@
 // import { TbSocial } from "react-icons/tb";
+import { MdOutlineAnalytics, MdOutlineDashboard } from "react-icons/md";
+import { GrFormSchedule } from "react-icons/gr";
+import { FiInbox } from "react-icons/fi";
+import { IoSettingsOutline, IoTimeOutline } from "react-icons/io5";
+import { TfiWrite } from "react-icons/tfi";
+import { PiSignOut } from "react-icons/pi";
 
 export const signupFields = [
   {
@@ -116,11 +122,11 @@ export const sidebarLinks = [
     links: [
       {
         name: "Dashboard",
-        // icon: <MdOutlineDashboard />,
+        icon: <MdOutlineDashboard />,
       },
       {
         name: "Analytics",
-        // icon: <MdOutlineAnalytics />,
+        icon: <MdOutlineAnalytics />,
       },
     ],
   },
@@ -129,19 +135,19 @@ export const sidebarLinks = [
     links: [
       {
         name: "Inbox",
-        // icon: <FiInbox />,
+        icon: <FiInbox />,
       },
       {
         name: "Recent",
-        // icon: <IoTimeOutline />,
+        icon: <IoTimeOutline />,
       },
       {
         name: "Compose",
-        // icon: <TfiWrite />,
+        icon: <TfiWrite />,
       },
       {
         name: "Schedule",
-        // icon: <GrFormSchedule />,
+        icon: <GrFormSchedule />,
       },
     ],
   },
@@ -150,11 +156,11 @@ export const sidebarLinks = [
     links: [
       {
         name: "Settings",
-        // icon: <IoSettingsOutline />,
+        icon: <IoSettingsOutline />,
       },
       {
         name: "Sign out",
-        // icon: <PiSignOut />,
+        icon: <PiSignOut />,
       },
     ],
   },

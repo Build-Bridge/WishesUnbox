@@ -32,6 +32,7 @@ const LoginPage = () => {
 
     if (isSuccess && user) {
       navigate("/dashboard");
+      // dispatch(getCurrentUser());
     }
 
     dispatch(reset());
@@ -41,6 +42,7 @@ const LoginPage = () => {
     const userData = data;
     console.log(userData);
     dispatch(login(userData));
+    // dispatch(getCurrentUser());
   };
 
   return (
