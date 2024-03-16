@@ -5,6 +5,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import Signup from "./sections/SignupPage";
 import LandingPage from "./sections/LandingPage";
 import DashboardCardList from "./components/Dashboard/DashboardCardList";
+import ProtectedRoutes from "./utils/ProtectedRoutes";
 
 const router = createBrowserRouter([
   {
@@ -21,11 +22,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: (
+      <ProtectedRoutes>
+        <Dashboard />
+      </ProtectedRoutes>
+    ),
     children: [
       {
         // Replace this with the actual child component and correct path
-        path: "/dashboard/cardlist",
+        path: "/dashboard/analytics",
         element: <DashboardCardList />,
       },
     ],

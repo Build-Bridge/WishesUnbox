@@ -12,7 +12,7 @@ export const Dashboard = () => {
         <div className="flex items-start">
           <DashboardNavbar />
         </div>
-        <div>
+        <div className="overflow-y-auto">
           <Outlet />
         </div>
       </div>

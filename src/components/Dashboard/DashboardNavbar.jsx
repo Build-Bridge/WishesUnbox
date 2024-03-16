@@ -5,7 +5,11 @@ import { RiMenuFill } from "react-icons/ri";
 import { useStateContext } from "../../contexts/ContextProvider";
 
 export const DashboardNavbar = () => {
-  const { setActiveMenu } = useStateContext();
+  const { setActiveMenu, searchText, setSearchText } = useStateContext();
+
+  const handleSearch = (e) => {
+    setSearchText(e.target.value);
+  };
   return (
     <div className="bg-primary w-full text-white">
       <div className="flex items-start justify-between p-2">
@@ -23,11 +27,16 @@ export const DashboardNavbar = () => {
         </button>
       </div>
       <div className="flex items-center justify-between gap-2 p-3">
-        <input
-          type="text"
-          className="bg-transparent text-white focus:outline-none border-2 border-white rounded-md p-1 w-[60%]"
-          placeholder="Search cards"
-        />
+        <div className="flex items-center justify-start gap-3 border-2 rounded-md px-1">
+          <FiSearch size={20} />
+          <input
+            type="text"
+            className="bg-transparent focus:outline-none p-1 w-[60%] placeholder:text-white"
+            placeholder="Search cards"
+            value={searchText}
+            onChange={handleSearch}
+          />
+        </div>
         <div className="flex items-center justify-center gap-1">
           <FaRegUserCircle /> <span>Micheal Keys</span>
         </div>
