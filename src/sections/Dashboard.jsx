@@ -9,7 +9,7 @@ export const Dashboard = () => {
         <Sidebar />
       </div>
       <div className="flex-1">
-        <div className="flex items-start">
+        <div>
           <DashboardNavbar />
         </div>
         <div className="overflow-y-auto">
