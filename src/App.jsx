@@ -6,11 +6,13 @@ import Signup from "./sections/SignupPage";
 import LandingPage from "./sections/LandingPage";
 import DashboardCardList from "./components/Dashboard/DashboardCardList";
 import ProtectedRoutes from "./utils/ProtectedRoutes";
+// import GetMonth from "./components/calendar/GetMonth";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LandingPage />,
+    // element: <GetMonth month="january" />,
   },
   {
     path: "/signup",
