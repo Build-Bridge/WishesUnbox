@@ -5,9 +5,9 @@ import { PiGithubLogoDuotone } from "react-icons/pi";
 
 const Footer = () => {
   return (
-    <div className="bg-[#222] px-3  items-center text-white">
+    <div className="bg-[#121212] px-3 py-5  items-center text-white">
       <div className=" mx-3  md:flex gap-5 px-10 pt-10">
-        <div className="ft:w-2/5 my-5 ">
+        <div className="ft:w-2/6 my-5 ">
           <h1 className="text-2xl sm:text-4xl font-semibold">WishesUnbox</h1>
           <p className=" my-5 text-wrap text-[#bbb]">
             {" "}
@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="ft:w-3/5 md:gap-2 gap-5 sm:flex justify-evenly my-7">
+        <div className="ft:w-4/6 md:gap-2 gap-5 sm:flex justify-evenly my-7">
           <div className="flex gap-3 justify-between mb-5">
             <div>
               <h1 className="text-2xl font-semibold text-white">Resources</h1>

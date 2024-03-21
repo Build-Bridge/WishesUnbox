@@ -1,21 +1,13 @@
-import { TbSocial } from "react-icons/tb";
-import { BiSolidCustomize } from "react-icons/bi";
-import { PiClockCountdownDuotone, PiArchiveTrayDuotone, PiSignOutDuotone } from "react-icons/pi";
-import { GoSignOut } from "react-icons/go";
+
+import {  PiSignOutDuotone } from "react-icons/pi";
 import { features } from "../constants";
+import { Link } from "react-router-dom";
 
 const Feature = () => {
-  // console.log(features)
-  // const icons = [
-  //   `${(<TbSocial />)}`,
-  //   `${(<BiSolidCustomize />)}`,
-  //   `${(<PiClockCountdownDuotone />)}`,
-  //   `${(<PiArchiveTrayDuotone />)}`,
-  // ];
   return (
     <div
       id="features"
-      className="bg-white py-28 my-12 padding mx-auto relative"
+      className="bg-white py-28 my-8 padding mx-auto relative"
     >
       <div className="my-4 mb-10">
         <h2 className="my-2 flex justify-center md:text-[50px] sm:text-[40px] xs:text-[30px] text-[30px]">
@@ -58,10 +50,12 @@ const Feature = () => {
         Amazing Right?
       </p>
       <div className="my-5 flex justify-center">
+        <Link className="" to="/signup">
         <button className="flex items-center text-black outline outline-2 font-bold shadow md:text-lg rounded-lg px-3 py-2">
           Get Started Today!
           <PiSignOutDuotone className="w-5 h-5 ml-3"/>
         </button>
+        </Link>
       </div>
     </div>
   );

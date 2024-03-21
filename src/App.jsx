@@ -1,5 +1,6 @@
 import Dashboard from "./sections/Dashboard";
 import LoginPage from "./sections/LoginPage";
+import PreviewCard from "./components/CreateCard/PreviewCard";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Signup from "./sections/SignupPage";
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <LoginPage />,
+  },
+  {
+    path: "/preview",
+    element: <PreviewCard />,
   },
   {
     path: "/dashboard",
