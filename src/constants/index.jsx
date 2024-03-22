@@ -116,56 +116,64 @@ export const features = [
   // },
 ];
 
-export const sidebarLinks = [
-  {
-    title: "Overview",
-    links: [
-      {
-        name: "Dashboard",
-        icon: <MdOutlineDashboard />,
-      },
-      {
-        name: "Analytics",
-        icon: <MdOutlineAnalytics />,
-      },
-    ],
-  },
-  {
-    title: "Content",
-    links: [
-      {
-        name: "Inbox",
-        icon: <FiInbox />,
-      },
-      {
-        name: "Recent",
-        icon: <IoTimeOutline />,
-      },
-      {
-        name: "Compose",
-        icon: <TfiWrite />,
-      },
-      {
-        name: "Schedule",
-        icon: <GrFormSchedule />,
-      },
-    ],
-  },
-  {
-    title: "Configurations",
-    links: [
-      {
-        name: "Settings",
-        icon: <IoSettingsOutline />,
-      },
-      {
-        name: "Sign out",
-        icon: <PiSignOut />,
-      },
-    ],
-  },
-];
+// export const sidebarLinks = [
+//   {
+//     title: "Overview",
+//     links: [
+//       {
+//         name: "Dashboard",
+//         icon: <MdOutlineDashboard />,
+//       },
+//       {
+//         name: "Analytics",
+//         icon: <MdOutlineAnalytics />,
+//       },
+//       {
+//         name: "Compose",
+//         icon: <TfiWrite />,
+//       },
+//     ],
+//   },
+//   {
+//     title: "Configurations",
+//     links: [
+//       {
+//         name: "Settings",
+//         icon: <IoSettingsOutline />,
+//       },
+//       {
+//         name: "Sign out",
+//         icon: <PiSignOut />,
+//       },
+//     ],
+//   },
+// ];
 
+export const dashboard = [
+  {
+    name: "Dashboard",
+    icon: <MdOutlineDashboard />,
+  },
+  {
+    name: "Analytics",
+    icon: <MdOutlineAnalytics />,
+  },
+  {
+    name: "Compose",
+    icon: <TfiWrite />,
+  },
+]
+
+export const configurations = [
+  {
+    name: "Settings",
+    icon: <IoSettingsOutline />,
+  },
+  {
+    name: "Sign out",
+    icon: <PiSignOut />,
+  },
+]
 // framer motion
 
 export const textVariant = (delay) => {

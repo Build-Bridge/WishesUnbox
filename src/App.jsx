@@ -12,7 +12,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <LandingPage />,
-    // element: <GetMonth month="january" />,
   },
   {
     path: "/signup",
