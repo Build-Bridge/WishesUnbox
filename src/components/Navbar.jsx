@@ -36,13 +36,13 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div id="nbar" className=" w-full border-b px-6 md:px-12 py-5 md:py-6">
+    <div id="nbar" className=" w-full border-b border-zinc-200 px-6 md:px-12 py-3 md:py-3">
       <div className=" flex items-center justify-between">
-        <div className="flex items-start">
+        <div className="flex items-center">
           <img
-            src="/camp.svg"
-            width={50}
-            height={50}
+            src="/logo.svg"
+            width={40}
+            height={40}
             alt="Picture of the author"
             className="hidden md:flex logo"
           />
@@ -115,7 +115,7 @@ const Navbar = () => {
           toggle ? "flex" : "hidden"
         }  bg-slate-50 z-50 shadow nv:hidden absolute top-20 right-0 mx-4 rounded-xl px-4 py-2`}
       >
-        <ul className="flex flex-col mx-3 font-medium mt-4 lg:mt-0 rounded-lg lg:flex-row lg:border-0 text-[1.1rem]">
+        <ul className="flex flex-col mx-3 font-medium mt-1 lg:mt-0 rounded-lg lg:flex-row lg:border-0 text-[1.1rem]">
           {navLinks.map((link) => (
             <a key={link.id} href={`/#${link.id}`}>
               <li
@@ -129,8 +129,8 @@ const Navbar = () => {
               </li>
             </a>
           ))}
-          <li className="bg-primary hover:bg-secondary flex items-center rounded-xl text-white mb-3 py-2 px-3">
-            <Link to="/login">
+          <li className=" flex items-center rounded-xl text-white mb-3 py-2 px-3">
+            <Link to="/login" className="flex hover:text-secondary items-center outline outline-1 text-[#445] shadow-slate-800 px-3 py-2">
               Sign in
               <GoSignIn className="w-4 h-4 ml-4" />
             </Link>
@@ -142,3 +142,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
