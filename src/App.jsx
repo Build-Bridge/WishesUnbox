@@ -6,6 +6,7 @@ import Signup from "./sections/SignupPage";
 import LandingPage from "./sections/LandingPage";
 import DashboardCardList from "./components/Dashboard/DashboardCardList";
 import ProtectedRoutes from "./utils/ProtectedRoutes";
+import SendCard from "./components/CreateCard/SendCard";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <LoginPage />,
+  },
+  {
+    path: "/send",
+    element: <SendCard />,
   },
   {
     path: "/dashboard",
